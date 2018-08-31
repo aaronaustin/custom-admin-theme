@@ -3,6 +3,7 @@
 Description: This makes things look badass.
 Version: 1.0
 License: GPLv2
+GitHub Plugin URI: https://github.com/aaronaustin/custom-admin-theme
 */
 
 //ADD SCRIPTS AND STYLES
