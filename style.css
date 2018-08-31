@@ -222,8 +222,12 @@ ul#adminmenu a.wp-has-current-submenu::after, ul#adminmenu > li.current > a.curr
     border-top: none;
     background: #fff;
 }
+table.widefat {
+    border: none;
+    box-shadow: none;
+}
 .widefat td, .widefat th {
-    border-bottom: 1px solid #f6f6f6;
+    border-bottom: 1px solid #e1e1e1;
 }
 #adminmenu .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu, .folded #adminmenu a.wp-has-current-submenu:focus + .wp-submenu {
     background-color: #fff;
