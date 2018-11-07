@@ -1,7 +1,7 @@
 <?php
 /*Plugin Name: Awesome Custom Admin Theme by Aaron Austin
 Description: This makes things look badass.
-Version: 1.0.3
+Version: 1.2.1
 License: GPLv2
 GitHub Plugin URI: https://github.com/aaronaustin/custom-admin-theme
 */
