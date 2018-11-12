@@ -95,33 +95,51 @@ body {
 .acf-field {
 	border: none !important;
 }
-#custom-category ul li {
+.custom-taxonomy ul li {
 	display: inline;
 	margin-right: 20px;
 }
-
-#the-list .column-categories a, a.btn-tag {
+.fixed .column-categories, .fixed .column-rel, .fixed .column-response, .fixed .column-role, .fixed .column-tags {
+    /* width: 30%; */
+}
+#the-list .column-categories, #the-list td[class^="taxonomy"], #the-list .column-taxonomy-display {
+    color: transparent;
+}
+#the-list .column-categories a, #the-list td[class^="taxonomy"] a,  #the-list .column-taxonomy-display a, a.btn-tag {
     background-color: var(--primary-color);
     color: #fff;
-    padding: 4px 6px;
+    font-family: 'BenchNine', sans-serif;
+    font-weight: 700;
+    padding: 0 3px;
     border-radius: 2px;
-    font-size: 10.8333px;
+    font-size: 14px;
     text-transform: uppercase;
+    border:none; 
+    white-space: nowrap;
+    
 }
 #the-list a.row-title {
     color: #555;
 }
 #the-list .row-actions {
     color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+}
+#the-list .row-actions span {
+    margin-bottom: 6px;
 }
 #the-list .row-actions a {
     /* background-color: var(--primary-color); */
     color: #888;
-    padding: 4px 6px;
+    font-family: 'BenchNine', sans-serif;
+    font-weight: 700;
+    padding: 0 3px;
     border-radius: 2px;
-    font-size: 10.8333px;
+    font-size: 14px;
     text-transform: uppercase;
-    border:1px solid #ddd;
+    border:1px solid #ddd; 
+    white-space: nowrap;
 }
 #the-list .row-actions a:hover {
     background-color: var(--primary-color);
@@ -357,4 +375,11 @@ a[class*="-action"]:hover {
 @keyframes spin {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
+}
+
+.column-categories, [class^="taxonomy"] {
+    width: 10% !important;
+}
+.wp-list-table.fixed {
+    table-layout: auto;
 }

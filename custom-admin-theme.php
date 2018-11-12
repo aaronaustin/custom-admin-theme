@@ -1,7 +1,7 @@
 <?php
 /*Plugin Name: Awesome Custom Admin Theme by Aaron Austin
 Description: This makes things look badass.
-Version: 1.2.1
+Version: 1.2.2
 License: GPLv2
 GitHub Plugin URI: https://github.com/aaronaustin/custom-admin-theme
 */
@@ -11,10 +11,13 @@ add_action( 'admin_init','awesome_custom_admin_assets');
 function awesome_custom_admin_assets() {
     wp_register_style('awesome_custom_admin_style', plugins_url('style.css',__FILE__ ));
     wp_enqueue_style('awesome_custom_admin_style');
+    wp_register_style('google_icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
+    wp_enqueue_style('google_icons');
     wp_register_script('awesome_custom_admin_script', plugins_url('script.js',__FILE__ ));
     wp_enqueue_script('awesome_custom_admin_script');
-    wp_register_script('google_font', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
+    wp_register_script('google_font', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|BenchNine:300,700');
     wp_enqueue_script('google_font');
+    wp_localize_script( 'awesome_custom_admin_script', 'categories', array( 'myCategories' => get_categories(), ) );
 }
 
 // remove links/menus from the admin bar
